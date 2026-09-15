@@ -1,73 +1,115 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Personal portfolio of a Computer Engineering student interested in software development, web development, data structures, databases and artificial intelligence.">
-
-    <title>My Portfolio | computer Engineering Student</title>
+    <title>Task Manager</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="#main-content">Skip to main content</a>
-
+    <!-- Header -->
     <header>
-        <h1>My Portfolio</h1>
+        <nav aria-label="Main Navigation">
+            <h2>Task Manager</h2>
 
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main id="main-content">
 
-        <section>
-            <h2>Welcome to My Portfolio</h2>
+    <!-- Main Content -->
+    <main>
+
+        <section class="hero">
+            <h1>My Task Manager</h1>
 
             <p>
-                Hello! I am a Computer Engineering student
-                interested in software development.
+                Manage your daily tasks easily with this simple
+                and interactive task management application.
             </p>
         </section>
 
-        <section>
-            <h2>About Me</h2>
 
-            <p>
-                I am interested in programming, web development,
-                data structures, databases and artificial intelligence.
+        <!-- Task Manager -->
+        <section class="task-section">
+
+            <h2>Task Manager</h2>
+
+            <!-- Add Task -->
+            <form id="taskForm">
+
+                <label for="taskInput">Enter Task</label>
+
+                <div class="task-input-container">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter a task..."
+                        required
+                    >
+
+                    <button type="submit">
+                        Add Task
+                    </button>
+                </div>
+
+            </form>
+
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-filter="all">
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="active">
+                    Active
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- Tasks -->
+            <div id="taskList"></div>
+
+
+            <!-- Task Count -->
+            <p id="taskCount">
+                0 tasks remaining
             </p>
-        </section>
 
-        <section>
-            <h2>My Skills</h2>
-
-            <ul>
-                <li>Java</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Data Structures</li>
-                <li>DBMS</li>
-            </ul>
         </section>
 
     </main>
 
+
+    <!---Footer -->
     <footer>
-        <p>
-            &copy; 2026 My Portfolio
-        </p>
+        <p>&copy; 2026 My Task Manager. All Rights Reserved.</p>
     </footer>
 
-</body>
 
+    <script src="script.js"></script>
+
+</body>
 </html>
